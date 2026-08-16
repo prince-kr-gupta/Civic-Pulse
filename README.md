@@ -1,142 +1,186 @@
-CIVIC PULSE
+```
+🚦 CIVIC PULSE
 
-A transparent, trackable, and accountable civic issue reporting and resolution platform.
+Report. Track. Resolve.
+A transparent, trackable, and accountable platform for reporting and resolving civic issues.
 
-Team: Destroyer
-Project: CIVIC PULSE
-Hackathon: Prasunethon 2.0
+🏆 Hackathon: Prasunethon 2.0
+👥 Team: Destroyer
+💡 Project: CIVIC PULSE
 
-📌 Overview
+🌍 What is CIVIC PULSE?
 
 CIVIC PULSE is a civic issue reporting and resolution platform designed to improve communication between citizens and local authorities.
 
-Citizens can report problems such as broken streetlights, overflowing garbage, damaged roads, blocked drainage, and water-supply issues. Instead of treating a complaint as a simple form submission, CIVIC PULSE treats every report as a trackable case with a visible lifecycle.
+Instead of treating a complaint as just a form submission, CIVIC PULSE treats every report as a trackable case with a visible lifecycle.
 
-Core Workflow
+🔄 Core Workflow
 
 Report → Verify → Assign → Resolve → Verify Resolution → Close
 
-The main goal is simple:
+💬 Our goal: If a citizen takes the time to report a problem, they should be able to see what happens to that report.
 
-If a citizen takes the time to report a problem, they should be able to see what happens to that report.
+🚨 The Problem
 
-🎯 Problem Statement
+Everyday civic problems can directly affect people's safety, health, and quality of life.
 
-Civic problems can directly affect the safety, health, and quality of life of people living in an area.
+Examples include:
 
-The challenge is not only providing citizens with a way to report problems. A major issue is the lack of visibility after a complaint is submitted.
+💡 Broken streetlights
+
+🗑️ Overflowing garbage
+
+🛣️ Damaged roads
+
+🚰 Water-supply problems
+
+🌧️ Blocked drainage
+
+The challenge is not only how to report an issue, but what happens after the report is submitted.
 
 Citizens may not know:
 
-Whether their complaint was seen
+🔎 Whether the complaint was seen
 
-Whether it was verified
+✅ Whether it was verified
 
-Who is responsible for solving it
+👤 Who is responsible for it
 
-What its current status is
+📊 What its current status is
 
-When it is expected to be resolved
+⏳ When it will be resolved
 
-CIVIC PULSE focuses on making this complete resolution process visible, trackable, and accountable.
+CIVIC PULSE addresses this visibility gap.
 
-💡 Solution
+💡 Our Solution
 
-CIVIC PULSE provides two major sides of the civic ecosystem:
+CIVIC PULSE creates a structured bridge between citizens and authorities.
 
-👤 Citizen Side
+👤 Citizen Portal
 
 Citizens can:
 
-Register and authenticate
+🔐 Register and authenticate
 
-Report civic issues
+📝 Report civic issues
 
-Select an issue category
+🏷️ Select issue categories
 
-Provide a description
+📍 Add the exact issue location
 
-Share the issue location
+📸 Upload supporting evidence
 
-Upload supporting images/evidence
+🆔 Receive a unique issue ID
 
-Receive a unique issue ID
+📊 Track issue progress
 
-Track issue status
+🔔 View resolution updates
 
-View resolution updates
-
-🏛️ Authority Side
+🏛️ Authority Dashboard
 
 Authorities can:
 
-View reported issues
+📋 View reported issues
 
-Verify submitted complaints
+🔍 Verify complaints
 
-Prioritize issues
+🚨 Prioritize important issues
 
-Assign issues
+👤 Assign issues to responsible personnel
 
-Update issue status
+🔄 Update issue status
 
-Add resolution updates
+🛠️ Add resolution updates
 
-Upload supporting resolution proof
+📸 Upload resolution proof
 
-Monitor civic issue analytics
+📈 View basic analytics
 
-Track issues based on location and category
+🗺️ Visualize issues geographically
 
 ✨ Key Features
 
-Citizen registration and authentication
+Feature
 
-Civic issue reporting
+Purpose
 
-Issue categorization
+🔐 Authentication
 
-Location-based reporting
+Secure citizen and authority access
 
-Supporting image/evidence upload
+📝 Issue Reporting
 
-Unique complaint/issue ID
+Submit civic problems with relevant details
 
-Complaint status tracking
+🏷️ Categorization
 
-Authority/admin dashboard
+Organize issues by civic category
 
-Issue verification
+📍 Location Mapping
 
-Issue prioritization
+Identify exactly where an issue exists
 
-Issue assignment
+📸 Evidence Upload
 
-Resolution updates
+Support complaints with images/media
 
-Resolution verification
+🆔 Unique Issue ID
 
-Location-based issue visualization
+Make every complaint independently trackable
 
-Basic civic issue analytics
+📊 Status Tracking
 
-🤖 AI Integration
+Show citizens what is happening with their report
 
-CIVIC PULSE is designed to use AI where it provides genuine value instead of adding AI only for demonstration.
+🏛️ Authority Dashboard
 
-Potential AI-assisted capabilities include:
+Centralized complaint management
 
-Automatic issue categorization
+🔍 Verification
 
-Complaint summarization
+Validate submitted complaints
 
-Smarter issue prioritization
+🚨 Prioritization
 
-Duplicate complaint detection
+Help authorities handle important issues first
 
-AI-assisted verification
+👤 Assignment
 
-For the prototype, AI features will be introduced according to feasibility and their actual usefulness to the civic workflow.
+Route issues to responsible personnel
+
+🛠️ Resolution Updates
+
+Record progress toward solving an issue
+
+✅ Resolution Verification
+
+Confirm that the reported problem was addressed
+
+📈 Analytics
+
+Understand recurring civic problems
+
+🗺️ Issue Visualization
+
+View reported issues based on location
+
+🤖 AI — Used Where It Actually Helps
+
+CIVIC PULSE does not aim to add AI just for the sake of having an AI feature.
+
+AI can assist with:
+
+🏷️ Automatic issue categorization
+
+📝 Complaint summarization
+
+🚨 Smarter issue prioritization
+
+🔁 Duplicate complaint detection
+
+🔍 AI-assisted verification
+
+The prototype will prioritize AI features that provide genuine value to the civic workflow.
 
 🛠️ Technology Stack
 
@@ -144,33 +188,92 @@ Layer
 
 Technology
 
-Frontend
+🎨 Frontend
 
 React.js, HTML, Tailwind CSS
 
-Backend
+⚙️ Backend
 
 Node.js
 
-Database
+🗄️ Database
 
 MongoDB
 
-AI
+🤖 AI
 
 Python, Google Gemini API
 
-Maps & Location
+🗺️ Maps & Location
 
 Google Maps API
 
-Authentication / Cloud
+☁️ Cloud & Authentication
 
 Firebase / AWS
 
-🏗️ Project Structure
+🏗️ Project Architecture
+
+                         ┌─────────────────────┐
+                         │       CITIZEN       │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │   REACT FRONTEND    │
+                         │   UI + MAPS + AUTH   │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │    NODE.JS API      │
+                         │  Business Logic     │
+                         └──────┬───────┬──────┘
+                                │       │
+                    ┌───────────┘       └───────────┐
+                    ▼                               ▼
+          ┌─────────────────┐             ┌─────────────────┐
+          │    MONGODB      │             │  AI SERVICES    │
+          │ Issues / Users  │             │ Gemini / Python │
+          └─────────────────┘             └─────────────────┘
+
+                         ┌─────────────────────┐
+                         │ AUTHORITY DASHBOARD │
+                         └─────────────────────┘
+
+🔄 Issue Lifecycle
+
+┌────────┐
+│ REPORT │  👤 Citizen submits issue
+└───┬────┘
+    ↓
+┌────────┐
+│ VERIFY │  🔍 Authority verifies complaint
+└───┬────┘
+    ↓
+┌────────┐
+│ ASSIGN │  👤 Issue assigned to responsible authority
+└───┬────┘
+    ↓
+┌─────────┐
+│ RESOLVE │  🛠️ Issue is addressed
+└───┬─────┘
+    ↓
+┌─────────────────┐
+│ VERIFY RESOLUTION│  ✅ Resolution is verified
+└────────┬────────┘
+         ↓
+     ┌───────┐
+     │ CLOSE │  🏁 Case completed
+     └───────┘
+
+📁 Project Structure
 
 CIVIC-PULSE/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
 │
 ├── PPT/
 │   └── CIVIC-PULSE_Presentation.pptx
@@ -184,210 +287,313 @@ CIVIC-PULSE/
 │   └── Future-Scope.md
 │
 ├── PROTOTYPE/
+│   │
 │   ├── frontend/
+│   │   ├── public/
+│   │   │   ├── images/
+│   │   │   ├── icons/
+│   │   │   └── favicon.ico
+│   │   │
+│   │   ├── src/
+│   │   │   ├── assets/
+│   │   │   │   ├── images/
+│   │   │   │   ├── icons/
+│   │   │   │   └── fonts/
+│   │   │   │
+│   │   │   ├── components/
+│   │   │   │   ├── common/
+│   │   │   │   ├── citizen/
+│   │   │   │   └── authority/
+│   │   │   │
+│   │   │   ├── pages/
+│   │   │   ├── services/
+│   │   │   ├── context/
+│   │   │   ├── utils/
+│   │   │   ├── App.jsx
+│   │   │   ├── main.jsx
+│   │   │   └── index.css
+│   │   │
+│   │   ├── package.json
+│   │   ├── vite.config.js
+│   │   └── .env.example
+│   │
 │   ├── backend/
+│   │   ├── src/
+│   │   │   ├── config/
+│   │   │   ├── controllers/
+│   │   │   ├── models/
+│   │   │   ├── routes/
+│   │   │   ├── middleware/
+│   │   │   ├── services/
+│   │   │   └── server.js
+│   │   ├── package.json
+│   │   └── .env.example
+│   │
 │   ├── ai/
+│   │   ├── categorization/
+│   │   ├── summarization/
+│   │   ├── requirements.txt
+│   │   └── README.md
+│   │
 │   └── database/
+│       ├── schemas/
+│       └── seed/
 │
 ├── DEMO/
 │   ├── screenshots/
 │   ├── demo-video/
 │   └── demo-script.md
 │
-├── README.md
-├── LICENSE
-└── .gitignore
+└── .github/
+    └── workflows/
+        └── deploy.yml
 
-🔄 Issue Lifecycle
+🎯 MVP Roadmap
 
-Each civic issue follows a structured lifecycle:
+Phase 1 — Foundation
 
-Citizen Reports Issue
-        ↓
-      Verify
-        ↓
-      Assign
-        ↓
-      Resolve
-        ↓
-Verify Resolution
-        ↓
-       Close
+Set up React frontend
 
-This workflow allows citizens to follow the progress of their reported issue while providing authorities with a structured system for managing complaints.
+Set up Node.js backend
 
-🧩 Prototype Scope
+Connect MongoDB
 
-The prototype focuses on demonstrating the complete journey of a civic complaint.
+Configure authentication
 
-MVP
+Create basic UI
+
+Phase 2 — Citizen Module
 
 Citizen registration/login
 
-Report civic issue
+Report issue form
 
-Select issue category
+Category selection
 
-Add location
+Location selection
 
-Upload supporting evidence
+Evidence upload
 
-Generate unique issue ID
+Unique issue ID
 
-Citizen issue tracking
+My Issues page
+
+Issue tracking
+
+Phase 3 — Authority Module
 
 Authority dashboard
 
-Verify issue
+Issue verification
 
-Prioritize issue
+Issue prioritization
 
-Assign issue
+Issue assignment
 
-Update resolution
+Status management
 
-Verify resolution
+Resolution updates
 
-Close issue
+Resolution verification
+
+Phase 4 — Intelligence & Analytics
+
+AI categorization
+
+AI summarization
 
 Basic analytics
 
-Extended Features
+Location-based visualization
 
-AI-based categorization
+Phase 5 — Demo & Submission
 
-AI-based summarization
+End-to-end testing
 
-Duplicate issue detection
+Security review
 
-Smarter prioritization
-
-AI-assisted verification
-
-Authority performance analytics
-
-City-level civic dashboards
-
-🔐 Security Considerations
-
-Security is an important part of the platform.
-
-The implementation should consider:
-
-Secure authentication
-
-Role-based authorization
-
-Input validation
-
-API authentication
-
-Secure file uploads
-
-Environment variables for API keys
-
-Protection of sensitive user information
-
-Server-side validation
-
-Database access controls
-
-Error handling without exposing sensitive information
-
-API keys and secrets must never be committed to the repository.
-
-Use .env files locally and provide .env.example files containing only the required variable names.
-
-📊 Expected Impact
-
-For Citizens
-
-Easier civic issue reporting
-
-Better visibility after submitting a complaint
-
-Ability to track issue progress
-
-Greater confidence in the reporting process
-
-For Authorities
-
-Centralized complaint management
-
-Structured issue prioritization
-
-Easier assignment and tracking
-
-Better understanding of recurring civic problems
-
-Data-driven resource prioritization
-
-🚀 Future Scope
-
-CIVIC PULSE can be expanded into a broader city-level civic management platform.
-
-Potential future improvements include:
-
-Smarter issue prioritization
-
-Duplicate complaint detection
-
-AI-assisted verification
-
-Authority performance analytics
-
-City-level civic dashboards
-
-More advanced civic data insights
-
-Expansion to additional civic departments
-
-👥 Team
-
-Team Destroyer
-
-Prince Kumar Gupta — Team Leader
-
-Arkendu Kundu — Team Member
-
-Archit Pande — Team Member
-
-🎥 Demo
-
-The DEMO/ directory will contain:
-
-Prototype screenshots
+Screenshots
 
 Demo video
 
-Demo script
+PPT
 
-The demonstration should primarily show the complete issue lifecycle:
+Final documentation
 
-Report → Verify → Assign → Resolve → Verify Resolution → Close
+🔐 Security Principles
 
-📄 Documentation
+Security should be considered throughout the prototype.
 
-Additional project documentation will be maintained inside the DOCUMENTATION/ directory.
+🔑 Keep API keys and secrets outside the repository
 
-Project-Overview.md — Project concept and objectives
+🛡️ Use authentication and role-based authorization
 
-System-Architecture.md — System architecture and components
+✅ Validate input on the server
 
-API-Documentation.md — Backend API documentation
+📁 Validate uploaded files
 
-Database-Design.md — Database structure
+🔒 Protect sensitive user information
 
-Security.md — Security considerations
+🚫 Never expose secrets in frontend code
 
-Future-Scope.md — Future improvements
+🗄️ Apply database access controls
 
-⚠️ Project Status
+⚠️ Return safe error messages without exposing internal details
 
-CIVIC PULSE is being developed as a prototype/MVP for Prasunethon 2.0.
+🌐 Protect backend APIs from unauthorized access
 
-The focus is to demonstrate a working and understandable civic issue journey rather than implementing every possible future feature.
+Never commit .env files or API keys to GitHub.
 
-📜 License
+📊 Expected Impact
 
-This project is developed by Team Destroyer for Prasunethon 2.0.
+👥 Citizens
+
+Easier issue reporting
+
+Better visibility after reporting
+
+Trackable complaint lifecycle
+
+Greater transparency
+
+Better confidence in civic reporting
+
+🏛️ Authorities
+
+Centralized issue management
+
+Structured prioritization
+
+Easier assignment and tracking
+
+Better understanding of recurring issues
+
+Improved resource prioritization
+
+🌆 Community
+
+More transparent civic communication
+
+Better visibility into local problems
+
+Data-driven civic decision making
+
+Stronger citizen participation
+
+🚀 Future Scope
+
+The platform can grow beyond the prototype into a broader city-level civic management system.
+
+Possible future improvements:
+
+🧠 Smarter issue prioritization
+
+🔁 Duplicate complaint detection
+
+🤖 AI-assisted verification
+
+📈 Authority performance analytics
+
+🗺️ City-level civic dashboards
+
+📊 Advanced civic data insights
+
+🏙️ Expansion to additional civic departments
+
+🎥 Prototype Demonstration
+
+The demo should tell one complete story rather than showing disconnected screens.
+
+Suggested Demo Flow
+
+👤 Citizen Login
+       ↓
+📝 Report Civic Issue
+       ↓
+📍 Select Location
+       ↓
+📸 Upload Evidence
+       ↓
+🆔 Receive Issue ID
+       ↓
+🏛️ Authority Dashboard
+       ↓
+🔍 Verify
+       ↓
+🚨 Prioritize
+       ↓
+👤 Assign
+       ↓
+🛠️ Resolve
+       ↓
+✅ Verify Resolution
+       ↓
+🏁 Close
+       ↓
+👤 Citizen Sees Final Status
+
+📚 Documentation
+
+Detailed documentation is maintained inside the DOCUMENTATION/ directory:
+
+📄 Project-Overview.md — Project concept and objectives
+
+🏗️ System-Architecture.md — System architecture
+
+🔌 API-Documentation.md — Backend API documentation
+
+🗄️ Database-Design.md — Database structure
+
+🔐 Security.md — Security considerations
+
+🚀 Future-Scope.md — Future improvements
+
+📸 Demo Assets
+
+The DEMO/ directory contains:
+
+🖼️ screenshots/ — Prototype screenshots
+
+🎬 demo-video/ — Demonstration video
+
+🗣️ demo-script.md — Demo presentation script
+
+👥 Team Destroyer
+
+Member
+
+Role
+
+Prince Kumar Gupta
+
+Team Leader
+
+Arkendu Kundu
+
+Team Member
+
+Archit Pande
+
+Team Member
+
+📜 Project Status
+
+🚧 Prototype / MVP in Development
+
+The immediate objective is to build a working, understandable, and demonstrable MVP that clearly shows the complete civic complaint journey from reporting to resolution.
+
+❤️ Our Vision
+
+CIVIC PULSE is not intended to be just another complaint form.
+
+We want to build a system where:
+
+A citizen reports a problem → the system tracks it → authorities act on it → the resolution becomes visible.
+
+Technology should not only collect complaints.
+It should help make the process of solving them visible, trackable, and accountable.
+
+🏆 Built by Team Destroyer
+
+CIVIC PULSE — Report. Track. Resolve.
+```
