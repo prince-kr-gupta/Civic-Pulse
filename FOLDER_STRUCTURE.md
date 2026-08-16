@@ -1,4 +1,5 @@
-<p> CIVIC-PULSE/
+```
+ CIVIC-PULSE/
 │
 ├── README.md
 ├── LICENSE
@@ -144,4 +145,4 @@
 └── .github/
     └── workflows/
         └── deploy.yml
-</p>
+```
