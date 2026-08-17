@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #050505;
+  color: #ededed;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.app-header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.35), 0 0 12px rgba(255, 255, 255, 0.15);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  padding-bottom: 0.2rem;
+  animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.25), 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.45), 0 0 16px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.app-header p {
+  color: #888888;
+  font-size: 1.1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.glass-card {
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  transition: border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f1f1f1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.75rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(8, 8, 8, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #ededed;
+  font-size: 0.95rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: #e0e0e0;
+  color: #050505;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.feed-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.issue-count {
+  background: rgba(255, 255, 255, 0.05);
+  color: #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.08);
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.issue-card {
+  background: rgba(15, 15, 15, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardAppear 0.5s ease-out forwards;
+}
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.issue-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.issue-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  gap: 0.5rem;
+}
+
+.issue-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ededed;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #cccccc;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.badge-roads { border-color: rgba(255, 255, 255, 0.25); color: #cccccc; }
+.badge-electricity { border-color: rgba(255, 255, 255, 0.25); color: #cccccc; }
+.badge-sanitation { border-color: rgba(255, 255, 255, 0.25); color: #cccccc; }
+.badge-water { border-color: rgba(255, 255, 255, 0.25); color: #cccccc; }
+.badge-other { border-color: rgba(255, 255, 255, 0.25); color: #cccccc; }
+
+.issue-desc {
+  color: #888888;
+  font-size: 0.925rem;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.issue-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #666666;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #cccccc;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  animation: pulseStatus 2s infinite ease-in-out;
+}
+
+@keyframes pulseStatus {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.6; }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #666666;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-out;
+}

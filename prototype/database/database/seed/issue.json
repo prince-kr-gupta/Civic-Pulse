@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Broken Streetlight",
+    "description": "Streetlight near the main block is flickering and cut off.",
+    "category": "Electricity",
+    "status": "Pending"
+  },
+  {
+    "title": "Pothole on Main Street",
+    "description": "Large pothole causing traffic slowdown and risk to two-wheelers.",
+    "category": "Roads",
+    "status": "Pending"
+  }
+]
