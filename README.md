@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Civic Pulse
 
 Civic Pulse is a civic issue reporting and tracking prototype with a React/Vite frontend, Express/MongoDB backend, Leaflet map, role-aware login, chatbot, and camera evidence capture.
