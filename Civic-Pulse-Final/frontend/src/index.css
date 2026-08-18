@@ -1,0 +1,33 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html {
+  background: #07111f;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  color: #f8fafc;
+  background: #07111f;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+html[data-theme="light"],
+body[data-theme="light"] {
+  background: #f8fafc;
+}
