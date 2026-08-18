@@ -1,46 +1,66 @@
-# Civic Pulse folder structure
-
-```text
+```
 Civic-Pulse/
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   ├── assets/
-│   │   ├── App.jsx
-│   │   ├── CivicChatbot.jsx
-│   │   ├── CivicMap.jsx
-│   │   ├── App.css
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── .env.example
-│   ├── package.json
-│   └── vite.config.js
-├── backend/
-│   ├── src/
+│
+├── Civic-Pulse-Final/
+│   │
+│   ├── frontend/
+│   │   ├── public/
+│   │   │
+│   │   ├── src/
+│   │   │   ├── assets/
+│   │   │   │
+│   │   │   ├── components/
+│   │   │   │   ├── common/
+│   │   │   │   ├── citizen/
+│   │   │   │   └── authority/
+│   │   │   │
+│   │   │   ├── pages/
+│   │   │   │   ├── Home/
+│   │   │   │   ├── Login/
+│   │   │   │   ├── Register/
+│   │   │   │   ├── CitizenDashboard/
+│   │   │   │   ├── AuthorityDashboard/
+│   │   │   │   └── ReportIssue/
+│   │   │   │
+│   │   │   ├── services/
+│   │   │   │
+│   │   │   ├── App.jsx
+│   │   │   ├── main.jsx
+│   │   │   └── index.css
+│   │   │
+│   │   ├── package.json
+│   │   └── vite.config.js
+│   │
+│   ├── backend/
 │   │   ├── config/
 │   │   │   └── db.js
+│   │   │
 │   │   ├── controllers/
 │   │   │   ├── authController.js
 │   │   │   └── issueController.js
+│   │   │
 │   │   ├── middleware/
-│   │   │   ├── auth.js
-│   │   │   └── error.js
+│   │   │   ├── authMiddleware.js
+│   │   │   └── errorMiddleware.js
+│   │   │
 │   │   ├── models/
 │   │   │   ├── User.js
-│   │   │   └── issue.js
+│   │   │   └── Issue.js
+│   │   │
 │   │   ├── routes/
 │   │   │   ├── authRoutes.js
 │   │   │   └── issueRoutes.js
+│   │   │
+│   │   ├── uploads/
+│   │   │
+│   │   ├── .env
+│   │   ├── .env.example
+│   │   ├── package.json
 │   │   └── server.js
-│   ├── .env.example
+│   │
+│   ├── .gitignore
+│   ├── README.md
 │   └── package.json
-├── database/
-│   └── seed/
-│       ├── issue.json
-│       └── seed.js
-├── README.md
-├── FOLDER_STRUCTURE.md
-└── .gitignore
+│
+└── README.md
 ```
