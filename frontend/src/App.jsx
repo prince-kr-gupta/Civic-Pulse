@@ -1073,8 +1073,8 @@ function Login({
         : "/auth/register";
 
       const baseUrl =
-        import.meta.env.VITE_API_URL ||
-        "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL ||
+  "https://civic-pulse-v6eu.onrender.com/api";
 
       const response = await fetch(`${baseUrl}${endpoint}`, {
         method: "POST",
