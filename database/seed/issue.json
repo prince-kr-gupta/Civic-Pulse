@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CIVIC-1045",
+    "title": "Garbage Overflow",
+    "description": "Waste bins are overflowing near the main road and require collection.",
+    "category": "Garbage",
+    "priority": "High",
+    "status": "In Progress",
+    "location": "Civil Lines, Guna",
+    "lat": 24.647,
+    "lng": 77.314,
+    "reportedBy": "Demo Citizen"
+  },
+  {
+    "id": "CIVIC-1046",
+    "title": "Broken Streetlight",
+    "description": "Streetlight near the JUET main gate is not working.",
+    "category": "Streetlight",
+    "priority": "Medium",
+    "status": "Reported",
+    "location": "JUET Main Gate, Guna",
+    "lat": 24.645,
+    "lng": 77.316,
+    "reportedBy": "Demo Citizen"
+  },
+  {
+    "id": "CIVIC-1047",
+    "title": "Damaged Road",
+    "description": "Large pothole causing problems for vehicles.",
+    "category": "Road",
+    "priority": "Low",
+    "status": "Resolved",
+    "location": "Guna Main Road",
+    "lat": 24.651,
+    "lng": 77.319,
+    "reportedBy": "Demo Citizen"
+  }
+]
