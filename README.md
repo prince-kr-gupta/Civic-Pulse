@@ -70,9 +70,6 @@ Civic-Pulse/
 │
 └── README.md
 ```
-
-## Run frontend
-
 # 🚨 Civic Pulse
 
 ### Crowdsourced Civic Issue Reporting & Resolution Platform
@@ -344,8 +341,6 @@ cd frontend
 npm install
 npm run dev
 ```
-
-<<<<<<< HEAD
 Create `frontend/.env` if needed:
 
 ```env
@@ -353,7 +348,7 @@ VITE_API_URL=http://localhost:5000/api
 ```
 
 ## Run backend
-=======
+
 Frontend:
 
 ```text
@@ -375,23 +370,17 @@ Project ZIP / Git repository
 MongoDB Atlas access
 ```
 
-They should:
->>>>>>> 3165f73a74821a5fa2a578394485f08a9b9f961c
-
 ```bash
 cd backend
 npm install
 ```
 
-<<<<<<< HEAD
 Copy `.env.example` to `.env` and set a real MongoDB URI and JWT secret.
-=======
 Create their local:
 
 ```text
 .env
 ```
->>>>>>> 3165f73a74821a5fa2a578394485f08a9b9f961c
 
 Then:
 
@@ -399,7 +388,6 @@ Then:
 npm run dev
 ```
 
-<<<<<<< HEAD
 The API runs on `http://localhost:5000`.
 
 ## Seed MongoDB
@@ -714,4 +702,4 @@ Built with:
 <p>Prince Kumar Gupta - Team Leader</p>
 <p>Archit Pande - Team Member</p>
 <p>Arkendu Kundu - Team Member</p>
->>>>>>> 3165f73a74821a5fa2a578394485f08a9b9f961c
+
