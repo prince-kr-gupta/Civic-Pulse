@@ -4,35 +4,75 @@
 Civic Pulse is a civic issue reporting and tracking prototype with a React/Vite frontend, Express/MongoDB backend, Leaflet map, role-aware login, chatbot, and camera evidence capture.
 
 ## Structure
-
-```text
+```
 Civic-Pulse/
-├── frontend/
-│   ├── src/
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   ├── CivicChatbot.jsx
-│   │   ├── CivicMap.jsx
-│   │   ├── App.css
-│   │   └── main.jsx
-│   ├── .env.example
-│   └── package.json
-├── backend/
-│   ├── src/
+│
+├── Civic-Pulse-Final/
+│   │
+│   ├── frontend/
+│   │   ├── public/
+│   │   │
+│   │   ├── src/
+│   │   │   ├── assets/
+│   │   │   │
+│   │   │   ├── components/
+│   │   │   │   ├── common/
+│   │   │   │   ├── citizen/
+│   │   │   │   └── authority/
+│   │   │   │
+│   │   │   ├── pages/
+│   │   │   │   ├── Home/
+│   │   │   │   ├── Login/
+│   │   │   │   ├── Register/
+│   │   │   │   ├── CitizenDashboard/
+│   │   │   │   ├── AuthorityDashboard/
+│   │   │   │   └── ReportIssue/
+│   │   │   │
+│   │   │   ├── services/
+│   │   │   │
+│   │   │   ├── App.jsx
+│   │   │   ├── main.jsx
+│   │   │   └── index.css
+│   │   │
+│   │   ├── package.json
+│   │   └── vite.config.js
+│   │
+│   ├── backend/
 │   │   ├── config/
+│   │   │   └── db.js
+│   │   │
 │   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   └── issueController.js
+│   │   │
 │   │   ├── middleware/
+│   │   │   ├── authMiddleware.js
+│   │   │   └── errorMiddleware.js
+│   │   │
 │   │   ├── models/
-│   │   └── routes/
-│   ├── .env.example
+│   │   │   ├── User.js
+│   │   │   └── Issue.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   └── issueRoutes.js
+│   │   │
+│   │   ├── uploads/
+│   │   │
+│   │   ├── .env
+│   │   ├── .env.example
+│   │   ├── package.json
+│   │   └── server.js
+│   │
+│   ├── .gitignore
+│   ├── README.md
 │   └── package.json
-├── database/
-│   └── seed/
-└── .gitignore
+│
+└── README.md
 ```
 
 ## Run frontend
-=======
+
 # 🚨 Civic Pulse
 
 ### Crowdsourced Civic Issue Reporting & Resolution Platform
@@ -138,74 +178,6 @@ Authentication uses:
 * npm
 
 ---
-
-# 📁 Project Structure
-
-```text
-Civic-Pulse/
-│
-├── frontend/
-│   │
-│   ├── public/
-│   │
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   │   ├── common/
-│   │   │   ├── citizen/
-│   │   │   └── authority/
-│   │   │
-│   │   ├── pages/
-│   │   │   ├── Home/
-│   │   │   ├── Login/
-│   │   │   ├── Register/
-│   │   │   ├── CitizenDashboard/
-│   │   │   ├── AuthorityDashboard/
-│   │   │   └── ReportIssue/
-│   │   │
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   │
-│   ├── package.json
-│   └── vite.config.js
-│
-├── backend/
-│   │
-│   ├── config/
-│   │   └── db.js
-│   │
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   └── issueController.js
-│   │
-│   ├── middleware/
-│   │   ├── authMiddleware.js
-│   │   └── errorMiddleware.js
-│   │
-│   ├── models/
-│   │   ├── User.js
-│   │   └── Issue.js
-│   │
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   └── issueRoutes.js
-│   │
-│   ├── uploads/
-│   │
-│   ├── .env
-│   ├── .env.example
-│   ├── package.json
-│   └── server.js
-│
-├── .gitignore
-├── README.md
-└── package.json
-```
-
----
-
 # ⚙️ Requirements
 
 Before running Civic Pulse, install:
@@ -241,7 +213,7 @@ The backend requires a MongoDB database.
 If using Git:
 
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY>
+git clone - https://github.com/prince-kr-gupta/Civic-Pulse.git
 ```
 
 Then:
@@ -283,34 +255,6 @@ Create `.env` from `.env.example`.
 copy .env.example .env
 ```
 
-Then open `.env`.
-
-Example:
-
-```env
-PORT=5000
-
-MONGODB_URI=your_mongodb_atlas_connection_string
-
-JWT_SECRET=your_long_random_secret
-
-CLIENT_ORIGIN=http://localhost:5173,http://localhost:5174
-```
-
-### Important
-
-Never commit `.env` to GitHub.
-
-The `.env` file contains private configuration such as:
-
-* Database credentials
-* JWT secret
-* API keys
-
-Only `.env.example` should be shared with the project.
-
----
-
 # 🗄️ MongoDB Atlas Setup
 
 The backend connects to MongoDB Atlas.
@@ -324,16 +268,6 @@ The database owner needs to:
 5. Make sure the MongoDB database user has the required permissions.
 6. Copy the MongoDB connection string.
 7. Put the connection string inside `.env`.
-
-Example:
-
-```env
-MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/civic-pulse
-```
-
-Do not share your actual database password publicly.
-
----
 
 # ▶️ Start the Backend
 
