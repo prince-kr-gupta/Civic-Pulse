@@ -1,6 +1,6 @@
 # 🚨 Civic Pulse
 
-### Crowdsourced Civic Issue Reporting & Resolution Platform
+### Crowdsordeycyy Civic Issue Reporting & Resolution Platform
 
 Civic Pulse is a full-stack web application that allows citizens to report civic issues such as potholes, garbage, broken streetlights, water problems, and other public infrastructure issues.
 
