@@ -49,9 +49,9 @@ function isAllowedOrigin(origin) {
   }
 
   // Allow the main production Vercel domain.
-  if (origin === "https://civicpulse-destroyer6.vercel.app") {
-    return true;
-  }
+  if (origin === "https://civicpulse-black-seven.vercel.app") {
+  return true;
+}
 
   // Allow Civic Pulse Vercel preview deployments.
   //
