@@ -6,8 +6,8 @@
 
 **🏆 Prasunethon 2.0** · **Team Destroyer**
 
-🌐 **Live Demo:** https://civicpulse-black-seven.vercel.app/
-💻 **Source Code:** https://github.com/prince-kr-gupta/Civic-Pulse
+<p>🌐 **Live Demo:** https://civicpulse-black-seven.vercel.app/</p>
+<p>💻 **Source Code:** https://github.com/prince-kr-gupta/Civic-Pulse</p>
 
 ---
 
