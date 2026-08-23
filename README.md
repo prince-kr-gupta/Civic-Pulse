@@ -327,31 +327,45 @@ JWT_SECRET
 
 are kept outside the source code and should never be committed to GitHub.
 
-🔑 Login Credentials
+🔐 Login Credentials
 
 🏛️ Authority Login
 
-Use the following credentials to log in as an authority:
+Use the following credentials to access the Authority Portal:
 
-Name: Authority
+Credential
 
-Email: authority@civic-pulse.com
+Details
 
-Password: Authority@123
+Name
 
-Role: authority
+Authority
+
+Email
+
+authority@civic-pulse.com
+
+Password
+
+Authority@123
+
+Role
+
+authority
 
 👤 Citizen Login
 
-To log in as a citizen:
+Citizens can create their own account directly from the registration page:
 
-Create your username.
+Create your username
 
-Use your own email.
+Use your own email
 
-Set your password.
+Set your password
 
-Create your account.
+Create Account
+
+🔐 Authority accounts are restricted. Public users can register only as Citizens.
 
 ⚙️ Run Locally
 
