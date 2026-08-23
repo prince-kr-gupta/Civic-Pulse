@@ -478,10 +478,8 @@ Civic Pulse can be extended with:
 * 🔍 Duplicate complaint detection
 * ⚡ Automatic priority estimation
 * 🏛️ Automatic department assignment
-* 📊 Authority analytics dashboard
 * ⭐ Citizen feedback after resolution
 * 🌐 Multilingual support
-* 📱 Progressive Web App / mobile application
 * 🏙️ Integration with municipal systems
 
 ---
