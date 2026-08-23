@@ -431,6 +431,28 @@ Backend  → Render
 Database → MongoDB Atlas
 ```
 
+```
+
+<h2> Authority Login</h2>
+
+<h3> USE </h3>
+<p>Name : Authority</p>
+<p>email: authority@civic-pulse.com
+<p>Password : Authority@123
+<p>role : "authority"
+
+```
+
+```
+
+<h2>Citizen Login</h2>
+
+<h3>1.Create your Username</h3>
+<h3>2.Use your Own Email</h3>
+<h3>3.Set the Password</h3>
+<h3>4.Create Account</h3>
+
+```
 This separation allows each layer to evolve independently.
 
 For larger municipal deployments, the architecture can be extended with:
@@ -457,10 +479,8 @@ Civic Pulse can be extended with:
 * 🔍 Duplicate complaint detection
 * ⚡ Automatic priority estimation
 * 🏛️ Automatic department assignment
-* 📊 Authority analytics dashboard
 * ⭐ Citizen feedback after resolution
 * 🌐 Multilingual support
-* 📱 Progressive Web App / mobile application
 * 🏙️ Integration with municipal systems
 
 ---
