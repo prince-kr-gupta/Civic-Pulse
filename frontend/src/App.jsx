@@ -164,17 +164,22 @@ function App() {
     setSelectedIssue(optimisticIssue);
     setPage("track");
 
-    try {
-      const saved = await api.createIssue(optimisticIssue);
-      setIssues((current) =>
-        current.map((item) =>
-          item.id === optimisticIssue.id ? saved : item
-        )
-      );
-      setSelectedIssue(saved);
-    } catch {
-      setApiError("Issue saved locally; backend is unavailable.");
-    }
+ try {
+  const saved = await api.createIssue(optimisticIssue);
+
+  setIssues((current) =>
+    current.map((item) =>
+      item.id === optimisticIssue.id ? saved : item
+    )
+  );
+
+  setSelectedIssue(saved);
+  setApiError("");
+} catch (error) {
+  setApiError(
+    error?.message || "Unable to save issue to the server."
+  );
+}
   };
 
   const updateIssueStatus = async (id, newStatus) => {
@@ -1607,40 +1612,50 @@ function ReportIssue({
     });
   };
 
-  const startCamera = async () => {
-    setCameraError("");
+ const startCamera = async () => {
+  setCameraError("");
 
-    if (!navigator.mediaDevices?.getUserMedia) {
+  if (!navigator.mediaDevices?.getUserMedia) {
+    setCameraError(
+      "Camera access is not supported. Please use HTTPS or localhost."
+    );
+    return;
+  }
+
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: { ideal: "environment" },
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+      },
+      audio: false
+    });
+
+    streamRef.current = stream;
+    setCameraOpen(true);
+
+    setTimeout(() => {
+      if (videoRef.current && streamRef.current) {
+        videoRef.current.srcObject = streamRef.current;
+      }
+    }, 100);
+  } catch (error) {
+    console.error("Camera error:", error);
+
+    if (error?.name === "NotAllowedError") {
       setCameraError(
-        "Camera access is not supported here. Use HTTPS or localhost."
+        "Camera permission was denied. Please allow camera access in your browser."
       );
-      return;
-    }
-
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: {
-          facingMode: { ideal: "environment" },
-          width: { ideal: 1280 },
-          height: { ideal: 720 }
-        },
-        audio: false
-      });
-
-      streamRef.current = stream;
-      setCameraOpen(true);
-
-      requestAnimationFrame(() => {
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        }
-      });
-    } catch {
+    } else if (error?.name === "NotFoundError") {
+      setCameraError("No camera was found on this device.");
+    } else {
       setCameraError(
-        "Camera permission was denied or the camera is unavailable."
+        "Unable to open the camera. Please check your camera permissions."
       );
     }
-  };
+  }
+};
 
   const stopCamera = () => {
     if (streamRef.current) {
@@ -1653,10 +1668,17 @@ function ReportIssue({
   const capturePhoto = () => {
     const video = videoRef.current;
 
-    if (!video || !video.videoWidth) {
-      setCameraError("Camera is not ready yet.");
-      return;
-    }
+   if (!video) {
+  setCameraError("Camera preview is unavailable.");
+  return;
+}
+
+if (!video.videoWidth || !video.videoHeight) {
+  setCameraError(
+    "Camera is still loading. Wait a moment and try again."
+  );
+  return;
+}
 
     const canvas = document.createElement("canvas");
     canvas.width = video.videoWidth;
@@ -1689,18 +1711,25 @@ function ReportIssue({
   const submitIssue = async (e) => {
     e.preventDefault();
 
-    if (
-      !title.trim() ||
-      !description.trim() ||
-      !location.trim()
-    ) {
-      setCameraError(
-        "Please fill the title, description and exact location."
-      );
-      return;
-    }
+   if (!title.trim() || !description.trim() || !location.trim()) {
+  setCameraError(
+    "Please fill the title, description and exact location."
+  );
+  return;
+}
 
-    setSubmitting(true);
+if (title.trim().length < 3) {
+  setCameraError("Issue title must be at least 3 characters.");
+  return;
+}
+
+if (description.trim().length < 5) {
+  setCameraError("Description must be at least 5 characters.");
+  return;
+}
+
+setCameraError("");
+setSubmitting(true);
 
     try {
       let uploadedEvidence = null;
@@ -1731,7 +1760,7 @@ function ReportIssue({
           month: "short",
           year: "numeric"
         }),
-        evidence: uploadedEvidence
+       evidence: uploadedEvidence?.url || null
       };
 
       await addIssue(issue);
@@ -1791,6 +1820,7 @@ function ReportIssue({
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="e.g. Broken streetlight near hostel"
+              minLength={3}
               maxLength={100}
               required
             />
@@ -1840,8 +1870,10 @@ function ReportIssue({
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Describe the problem clearly. Mention what happened, how serious it is, and how it affects people..."
+              minLength={5}
               maxLength={500}
               required
+          
             />
 
             <div className="character-count">
