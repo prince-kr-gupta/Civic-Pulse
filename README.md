@@ -6,8 +6,8 @@
 
 **🏆 Prasunethon 2.0** · **Team Destroyer**
 
-🌐 **Live Demo:** https://civicpulse-black-seven.vercel.app/
-💻 **Source Code:** https://github.com/prince-kr-gupta/Civic-Pulse
+<p>🌐 **Live Demo:** https://civicpulse-black-seven.vercel.app/</p>
+<p>💻 **Source Code:** https://github.com/prince-kr-gupta/Civic-Pulse</p>
 
 ---
 
@@ -299,6 +299,26 @@ JWT_SECRET
 are kept outside the source code and should never be committed to GitHub.
 
 ---
+## 🔑 Demo Login Credentials
+
+To evaluate the complete Civic Pulse workflow, judges and reviewers can use the following authority account to access the **Authority Portal**.
+
+### 🏛️ Authority Account
+
+| Field | Credential |
+|---|---|
+| **Email** | `authority@civic-pulse.com` |
+| **Password** | `Authority@123` |
+| **Role** | Authority |
+
+> **Note:** Public registration is restricted to Citizen accounts. Authority accounts are pre-configured and cannot be created through the public registration page.
+
+### 👤 Citizen Account
+
+Reviewers can create a new Citizen account directly from the **Register** page and use it to report and track civic issues.
+
+🌐 **Live Application:**  
+https://civicpulse-black-seven.vercel.app/
 
 # ⚙️ Run Locally
 
@@ -431,6 +451,7 @@ Backend  → Render
 Database → MongoDB Atlas
 ```
 
+```
 This separation allows each layer to evolve independently.
 
 For larger municipal deployments, the architecture can be extended with:
