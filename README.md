@@ -91,7 +91,7 @@ Authorities have dedicated access to:
 
 * Review reported civic issues
 * Monitor active complaints
-* Update issue status
+* Update issue status and check the issue on civic map
 * Manage the resolution workflow
 * Track pending and resolved issues
 
