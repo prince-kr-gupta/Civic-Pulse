@@ -13,7 +13,7 @@
 
 ## 🚀 Overview
 
-**Civic Pulse** is a full-stack civic issue reporting and resolution platform designed to make communication between citizens and local authorities more **transparent, trackable, and efficient**.
+**Civic Pulse** is a full-stack civic issue reporting and resolution platform designed to make communication between citizens and local authorities it is more **transparent, trackable, and efficient**.
 
 Citizens can report civic problems, monitor their complaints, view issue locations on a civic map, and track the complete resolution journey.
 
