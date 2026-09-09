@@ -391,15 +391,7 @@ Start the frontend:
 
 ```bash
 npm run dev
-```
 
-The Vite application will normally be available at:
-
-```text
-http://localhost:5173
-```
-
----
 
 # ☁️ Production Deployment
 
@@ -550,6 +542,6 @@ Our submission consists of:
 
 **Making civic reporting transparent, trackable and accountable.**
 
-Developed by **Team Destroyer** for **Prasunethon 2.0**
+Developed by **Team Destroyer** for **Prasunethon 2.0 Hackathon**
 
 </div>
